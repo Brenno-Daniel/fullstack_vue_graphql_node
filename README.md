@@ -1,4 +1,5 @@
 # fullstack_vue_graphql_node
+Repo sobre estudo de projeto utilizando Vue.js, GraphQL e Node.js <3 
 
 ## Project setup
 ```
