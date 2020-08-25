@@ -89,41 +89,39 @@ export default {
 	name: "App",
 	data: function () {
 		return {
-      prefix: "",
-      sufix: "",
+			prefix: "",
+			sufix: "",
 			prefixes: ["Air", "Jet", "Flight"],
-			sufixes: ["Hub", "Station", "Mart"],
-			domains: ["AirHub", "AirStation", "AirMart", "JetHub", "JetStation", "JetMart", "FlightHub", "FlightStation", "FlightMart"]
+			sufixes: ["Hub", "Station", "Mart"]
 		};
 	},
-  methods: {
-    addPrefix(prefix) {
-      this.prefixes.push(prefix);
-      this.prefix = "";
-      this.generate();
-    },
-    deletePrefix(prefix) {
-      this.prefixes.splice(this.prefixes.indexOf(prefix), 1);
-      this.generate();
-    },
-    addSufix(sufix) {
-      this.sufixes.push(sufix);
-      this.sufix = "";
-      this.generate();
-    },
-    deleteSufix(sufix) {
-      this.sufixes.splice(this.prefixes.indexOf(sufix), 1);
-      this.generate();
-    },
-    generate() {
-      this.domains = [];
-      for (const prefix of this.prefixes) {
-        for (const sufix of this.sufixes) {
-          this.domains.push(prefix + sufix)
-        }
-      }
-    }
-  }
+	methods: {
+		addPrefix(prefix) {
+			this.prefixes.push(prefix);
+			this.prefix = "";
+		},
+		deletePrefix(prefix) {
+			this.prefixes.splice(this.prefixes.indexOf(prefix), 1);
+		},
+		addSufix(sufix) {
+			this.sufixes.push(sufix);
+			this.sufix = "";
+		},
+		deleteSufix(sufix) {
+			this.sufixes.splice(this.prefixes.indexOf(sufix), 1);
+		}
+	},
+	computed: {
+		domains() {
+			const domains = [];
+			for (const prefix of this.prefixes) {
+				for (const sufix of this.sufixes) {
+					this.domains.push(prefix + sufix);
+				}
+			}
+			return domains;
+		}
+	}
 };
 </script>
 
