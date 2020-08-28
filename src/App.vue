@@ -5,6 +5,7 @@
       <br>
       <h6 class="text-secondary">Gerador de nomes utilizando Vue.js, GraphQL e Node</h6>
     </div>
+    <HelloWorld></HelloWorld>
     <div id="main">
       <div class="container">
         <div class="row">
@@ -75,8 +76,8 @@
                   <div class="col-md">
                     {{ domain.name }}
                   </div>
-                  <div class="col-md">
-                    <a class="btn btn-info text-right" v-bind:href="domain.checkout" target="_blank">
+                  <div class="col-md text-right">
+                    <a class="btn btn-info" v-bind:href="domain.checkout" target="_blank">
                       <span class="fa fa-shopping-cart"></span>
                     </a>
                   </div>
@@ -93,9 +94,13 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
+import HelloWorld from "./components/HelloWorld";
 
 export default {
 	name: "App",
+	components: {
+		HelloWorld
+	},
 	data: function () {
 		return {
 			prefix: "",
@@ -125,13 +130,13 @@ export default {
 			const domains = [];
 			for (const prefix of this.prefixes) {
 				for (const sufix of this.sufixes) {
-          const name = prefix + sufix;
-          const url = name.toLowerCase();
-          const checkout = `https://checkout.hostgator.com.br/?a=add&sld=${url}&tld=.com.br`;
-					this.domains.push({
-            name,
-            checkout
-          });
+					const name = prefix + sufix;
+					const url = name.toLowerCase();
+					const checkout = `https://checkout.hostgator.com.br/?a=add&sld=${url}&tld=.com.br`;
+					domains.push({
+						name,
+						checkout
+					});
 				}
 			}
 			return domains;
