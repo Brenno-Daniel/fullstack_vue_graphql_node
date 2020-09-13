@@ -5,7 +5,7 @@ Objetivo é desenvolver uma aplicação completa utilizando as tecnologias Vue.j
 
 #### Aplicação de geração de nomes.
 
-Projeto desenvolvido seguindo as aulas do Rodrigo Branas, link para a série de vídeos Fullstack Js abaixo:
+Projeto desenvolvido seguindo as aulas do Rodrigo Branas, link para a série de vídeos Fullstack Js:
 https://www.youtube.com/playlist?list=PLQCmSnNFVYnTiC-pPY0SySbf-ZNGBwnaG
 
 
