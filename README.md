@@ -1,13 +1,13 @@
 # fullstack_vue_graphql_node
-```
+
 Objetivo é desenvolver uma aplicação completa utilizando as tecnologias Vue.js, GraphQL e Node.
-```
+
 
 #### Aplicação de geração de nomes.
-```
+
 Projeto desenvolvido seguindo as aulas do Rodrigo Branas, link para a série de vídeos Fullstack Js abaixo:
 https://www.youtube.com/playlist?list=PLQCmSnNFVYnTiC-pPY0SySbf-ZNGBwnaG
-```
+
 
 ## Project setup
 ```
