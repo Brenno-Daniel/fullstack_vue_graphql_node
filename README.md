@@ -11,7 +11,8 @@ https://www.youtube.com/playlist?list=PLQCmSnNFVYnTiC-pPY0SySbf-ZNGBwnaG
 
 ### Estrutura do projeto 
 
-Pasta Client se encontra a aplicação desenvolvida em Vue.js
+Pasta Client se encontra a aplicação desenvolvida em Vue.js.
+
 Pasta Server se encontra a estrutura do banco utilizando Apollo Server com GraphQL.
 
 ### Inicialize o server
