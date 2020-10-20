@@ -1,11 +1,15 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
+import Vuex from "vuex";
 import DomainList from "./components/DomainList.vue";
 import DomainView from "./components/DomainView.vue"; 
 
 
 Vue.use(VueRouter);
+Vue.use(Vuex);
+
+const store = new Vuex.Store({});
 
 const router = new VueRouter({
 	routes: [
@@ -29,5 +33,6 @@ Vue.config.productionTip = false;
 
 new Vue({
 	router,
+	store,
 	render: h => h(App),
 }).$mount("#app");
